@@ -4,21 +4,23 @@ import PropTypes from 'prop-types'
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
         <div className="logo">
-            <span className="icon fa-diamond"></span>
+            <span className="fab fa-js fa-4x"></span>
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Dimension</h1>
-                <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-                for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+                <h1>ROTO</h1>
+                <p>Software Engineer, Band Idiots Bassist, Cat Lover.</p>
             </div>
         </div>
         <nav>
             <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Intro</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('slides')}}>Slides</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('resume')}}>RESUME</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="https://idiots.band" target="_blank">Band<i className="fas fa-external-link-alt" /></a></li>
+                <li><a href="https://blog.roto.codes" target="_blank">Blog<i className="fas fa-external-link-alt" /></a></li>
+                
             </ul>
         </nav>
     </header>
