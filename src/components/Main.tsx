@@ -1,17 +1,20 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+import EmbedSlide from './EmbedSlide'
 
 import work from '../images/work.png'
 
+interface Props {
+  isArticleVisible: boolean,  
+  timeout: boolean,
+  articleTimeout: boolean,
+  article: string,
+  setWrapperRef: (node: any) => void,
+  onCloseArticle: () => void,
+}
 
-const EmbedSlide = ({ src }) => (
-  <p className="EmbedSlide">
-    <iframe src={src} width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </p>
-)
-class Main extends React.Component {
+class Main extends React.Component<Props> {
   render() {
-
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
 
     return (
@@ -54,15 +57,6 @@ class Main extends React.Component {
       </div>
     )
   }
-}
-
-Main.propTypes = {
-  route: PropTypes.object,
-  article: PropTypes.string,
-  articleTimeout: PropTypes.bool,
-  onCloseArticle: PropTypes.func,
-  timeout: PropTypes.bool,
-  setWrapperRef: PropTypes.func.isRequired,
 }
 
 export default Main

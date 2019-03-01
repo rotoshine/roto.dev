@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-dimension-v2",
-  "description": "Gatsby Starter - Dimension V2",
+  "name": "roto.dev",
+  "description": "Roto's work, slides, resume, and more.",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "rotoshine <rotoshine@gmail.com>",
   "dependencies": {
     "gatsby": "^2.0.76",
     "gatsby-plugin-google-analytics": "^2.0.15",
@@ -10,26 +10,41 @@
     "gatsby-plugin-offline": "^2.0.16",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.7",
+    "gatsby-plugin-typescript": "^2.0.0",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "roto",
+    "rotoshine",
+    "taeheekim",
+    "TaeHee Kim",
+    "winterwolf0412"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write '**/*.ts'",
+    "type-check": "tsc --noEmit",
+    "lint": "tslint --project ."
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "@types/node": "^10.3.1",
+    "@types/react": "16.3.16",
+    "@types/react-dom": "16.0.6",
+    "@types/react-helmet": "^5.0.8",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.9.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/rotoshine/roto.dev"
   }
 }

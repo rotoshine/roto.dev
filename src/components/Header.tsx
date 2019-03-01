@@ -1,8 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const Header = (props) => (
-    <header id="header" style={props.timeout ? {display: 'none'} : {}}>
+interface Props {
+  timeout: boolean,
+  onOpenArticle: (article: string) => void,
+}
+const Header = ({ timeout, onOpenArticle }: Props) => (
+    <header id="header" style={timeout ? {display: 'none'} : {}}>
         <div className="logo">
             <span className="fab fa-js fa-4x"></span>
         </div>
@@ -14,10 +17,10 @@ const Header = (props) => (
         </div>
         <nav>
             <ul>
-                <li><a href="#" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
-                <li><a href="#" onClick={() => {props.onOpenArticle('slides')}}>Slides</a></li>
-                <li><a href="#" onClick={() => {props.onOpenArticle('resume')}}>RESUME</a></li>
-                <li><a href="#" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="#" onClick={() => {onOpenArticle('work')}}>Work</a></li>
+                <li><a href="#" onClick={() => {onOpenArticle('slides')}}>Slides</a></li>
+                <li><a href="#" onClick={() => {onOpenArticle('resume')}}>RESUME</a></li>
+                <li><a href="#" onClick={() => {onOpenArticle('contact')}}>Contact</a></li>
                 <li><a href="https://idiots.band" target="_blank">Band<i className="fas fa-external-link-alt" /></a></li>
                 <li><a href="https://blog.roto.codes" target="_blank">Blog<i className="fas fa-external-link-alt" /></a></li>
                 
@@ -25,10 +28,5 @@ const Header = (props) => (
         </nav>
     </header>
 )
-
-Header.propTypes = {
-    onOpenArticle: PropTypes.func,
-    timeout: PropTypes.bool
-}
 
 export default Header

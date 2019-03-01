@@ -1,12 +1,27 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 
-class IndexPage extends React.Component {
-  constructor(props) {
+interface Props {
+  location: any
+}
+
+interface State {
+  isArticleVisible: boolean
+  timeout: boolean
+  articleTimeout: boolean
+  article: string
+  loading: string
+}
+
+class IndexPage extends React.Component<Props, State> {
+  wrapperRef: any
+  timeoutId: any
+
+  constructor(props: Props) {
     super(props)
     this.state = {
       isArticleVisible: false,
@@ -15,10 +30,6 @@ class IndexPage extends React.Component {
       article: '',
       loading: 'is-loading'
     }
-    this.handleOpenArticle = this.handleOpenArticle.bind(this)
-    this.handleCloseArticle = this.handleCloseArticle.bind(this)
-    this.setWrapperRef = this.setWrapperRef.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   componentDidMount () {
@@ -35,12 +46,11 @@ class IndexPage extends React.Component {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
 
-  setWrapperRef(node) {
+  setWrapperRef = (node: any) => {
     this.wrapperRef = node;
   }
 
-  handleOpenArticle(article) {
-
+  handleOpenArticle = (article: string) => {
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
       article
@@ -60,8 +70,7 @@ class IndexPage extends React.Component {
 
   }
 
-  handleCloseArticle() {
-
+  handleCloseArticle = () => {
     this.setState({
       articleTimeout: !this.state.articleTimeout
     })
@@ -81,7 +90,7 @@ class IndexPage extends React.Component {
 
   }
 
-  handleClickOutside(event) {
+  handleClickOutside = (event: any) => {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
       if (this.state.isArticleVisible) {
         this.handleCloseArticle();

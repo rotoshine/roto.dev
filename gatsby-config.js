@@ -2,9 +2,13 @@ module.exports = {
   siteMetadata: {
     title: "ROTO - Software Engineer",
     author: "TaeHee Kim",
-    description: "Roto's portfolio"
+    description: "Roto's page",
+    url: 'https://roto.dev',
+    imageUrl: 'https://roto.dev/images/profile.jpg',
+    keywords: 'ROTO\'s works, slides, resume, and more...'
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
