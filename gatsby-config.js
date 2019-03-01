@@ -4,7 +4,7 @@ module.exports = {
     author: "TaeHee Kim",
     description: "Roto's works, slides, resume, and more...",
     url: 'https://roto.dev',
-    imageUrl: 'https://roto.dev/images/profile.jpg',
+    imageUrl: 'https://roto.dev/images/profile-work.jpg',
     keywords: 'roto, rotoshine, winterwolf0412, front-end, javascript, node.js'
   },
   plugins: [
