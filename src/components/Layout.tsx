@@ -65,6 +65,7 @@ const Layout = ({ children, location }: Props) => {
                 { property: 'og:type', content: 'website' },
                 { property: 'og:url', content: url },
                 { property: 'og:image', content: imageUrl },
+                { property: 'og:description', content: description },
                 { name: 'twitter:card', content: 'summary_large_image' },
                 { name: 'twitter:site', content: '@winterwolf0412' },
                 { name: 'twitter:creator', content: '@winterwolf0412' },
