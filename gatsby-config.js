@@ -1,10 +1,12 @@
+const url = 'https://roto.dev'
+
 module.exports = {
   siteMetadata: {
     title: "ROTO - Software Engineer",
     author: "TaeHee Kim",
     description: "Roto's works, slides, resume, and more...",
-    url: 'https://roto.dev',
-    imageUrl: 'https://roto.dev/images/profile-work.jpg',
+    url,
+    imageUrl: `${url}/images/profile-work.jpg`,
     keywords: 'roto, rotoshine, winterwolf0412, front-end, javascript, node.js'
   },
   plugins: [
@@ -13,8 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'ROTO - Software Engineer',
+        short_name: 'roto.dev',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
