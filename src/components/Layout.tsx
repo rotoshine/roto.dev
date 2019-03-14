@@ -58,9 +58,10 @@ const Layout = ({ children, location }: Props) => {
                 { rel: 'canonical', href: url }
               ]}
               meta={[
+                { name: 'google-site-verification', content: 'iZvCNzXJfIyvFGy_kCX4pfCegZRMuwjsbMd413yi9cU' },
                 { name: 'viewport', content: 'initial-scale=1.0, width=device-width' },
                 { name: 'description', content: description },
-                { name: 'keywords', content: keywords },              
+                { name: 'keywords', content: keywords },
                 { property: 'og:title', content: title },
                 { property: 'og:type', content: 'website' },
                 { property: 'og:url', content: url },
@@ -79,7 +80,7 @@ const Layout = ({ children, location }: Props) => {
             {content}
           </>
         )
-      }}      
+      }}
     />
   )
 }
