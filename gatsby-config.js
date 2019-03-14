@@ -6,6 +6,7 @@ module.exports = {
     author: "TaeHee Kim",
     description: "Roto's works, slides, resume, and more...",
     url,
+    siteUrl: url,
     imageUrl: `${url}/images/profile-work.jpg`,
     keywords: 'roto, rotoshine, winterwolf0412, front-end, javascript, node.js'
   },
@@ -26,6 +27,8 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
