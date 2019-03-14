@@ -59,6 +59,7 @@ const Layout = ({ children, location }: Props) => {
               ]}
               meta={[
                 { name: 'google-site-verification', content: 'iZvCNzXJfIyvFGy_kCX4pfCegZRMuwjsbMd413yi9cU' },
+                { name: 'naver-site-verification', content: '99c308766fba0c298c818efd0b7ac12803e05734'},
                 { name: 'viewport', content: 'initial-scale=1.0, width=device-width' },
                 { name: 'description', content: description },
                 { name: 'keywords', content: keywords },
