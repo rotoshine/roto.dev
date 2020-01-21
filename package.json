@@ -14,8 +14,8 @@
     "gatsby-plugin-sitemap": "^2.0.9",
     "gatsby-plugin-typescript": "^2.0.0",
     "node-sass": "^4.11.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -28,6 +28,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "start": "npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.ts'",
@@ -35,11 +36,11 @@
     "lint": "tslint --project ."
   },
   "devDependencies": {
-    "prettier": "^1.14.2",
     "@types/node": "^10.3.1",
-    "@types/react": "16.3.16",
-    "@types/react-dom": "16.0.6",
+    "@types/react": "^16.9.18",
+    "@types/react-dom": "^16.9.5",
     "@types/react-helmet": "^5.0.8",
+    "prettier": "^1.14.2",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0",
