@@ -1,6 +1,7 @@
 import './uses.scss'
 
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 
 type UsesContent = {
@@ -55,6 +56,7 @@ export default function UsesPage() {
                 </ul>
               </>
             ))}
+            <Link to="/">Move to main</Link>
           </div>
           <div id="bg"></div>
         </div>
